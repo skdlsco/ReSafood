@@ -1,5 +1,7 @@
 package com.example.eka.resafood.Activity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,15 +16,17 @@ public class RegisterActivity extends AppCompatActivity {
     private Button btn_cancel, btn_register;
     private ImageView btn_back;
     private EditText name,password,check_password,email;
+    private Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
         //초기화
-        btn_cancel = (Button) findViewById(R.id.cancel);
-        btn_register = (Button) findViewById(R.id.register);
+        btn_cancel = (Button) findViewById(R.id.register_cancel);
+        btn_register = (Button) findViewById(R.id.register_signup);
         btn_back = (ImageView) findViewById(R.id.register_back);
+
         name = (EditText) findViewById(R.id.register_name);
         password= (EditText) findViewById(R.id.register_password);
         check_password = (EditText) findViewById(R.id.register_check_password);
@@ -56,6 +60,10 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "문자와 숫자를 혼용하십시요.", Toast.LENGTH_SHORT).show();
                 }else if(name.getText().toString().equals("")){
                     Toast.makeText(RegisterActivity.this, "이름을 입력해주세요.", Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent intent = new Intent(context,TutorialActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
             }
         });

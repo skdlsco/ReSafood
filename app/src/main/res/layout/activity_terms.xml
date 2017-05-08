@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical"
+    tools:context="com.example.eka.resafood.Activity.TermsActivity">
+    <LinearLayout
+        android:background="@drawable/terms_bg"
+        android:layout_weight="3.5"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:weightSum="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_weight="7.7"
+                android:gravity="bottom"
+                android:textColor="#fff"
+                android:layout_marginLeft="17dp"
+                android:text="이용약관"
+                android:textSize="36sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="2.3"
+                android:layout_gravity="left"
+                android:layout_marginTop="8dp"
+                android:textColor="#fff"
+                android:alpha="0.6"
+                android:layout_marginLeft="17dp"
+                android:text="safood를 사용하기 위해선\n아래 약관에 동의해야합니다."
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="bottom"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <ImageView
+            android:alpha="0.8"
+            android:background="@drawable/terms_resource1"
+            android:layout_gravity="bottom"
+            android:layout_weight="7.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_weight="5.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:orientation="vertical">
+            <TextView
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="Lorem Ipusm"
+                android:textSize="28sp"
+                android:textColor="#626262"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textSize="15sp"
+                android:textColor="#626262"
+                android:text="@string/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <Button
+            android:id="@+id/terms_cancel"
+            android:background="#206aef"
+            android:text="취소"
+            android:textSize="17sp"
+            android:textColor="#fff"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/terms_agree"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#206aef"
+            android:text="동의하고 다음"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+    </LinearLayout>
+</LinearLayout>

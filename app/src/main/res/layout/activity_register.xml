@@ -226,7 +226,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <Button
-            android:id="@+id/cancel"
+            android:id="@+id/register_cancel"
             android:background="#206aef"
             android:text="취소"
             android:textColor="#fff"
@@ -234,7 +234,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent" />
         <Button
-            android:id="@+id/register"
+            android:id="@+id/register_signup"
             android:background="#206aef"
             android:text="회원가입하기"
             android:textColor="#fff"

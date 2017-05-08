@@ -3,6 +3,8 @@ package com.example.eka.resafood.Activity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.eka.resafood.Adapter.TutorialPagerAdapter;
 import com.example.eka.resafood.R;
@@ -34,6 +36,15 @@ public class TutorialActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 indicatorView.Select(position);
+                if (position==5){
+                    Button btn= (Button) findViewById(R.id.bnt_tutorial);
+                    btn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            onBackPressed();
+                        }
+                    });
+                }
             }
 
             @Override
@@ -41,5 +52,6 @@ public class TutorialActivity extends AppCompatActivity {
 
             }
         });
+
     }
 }
