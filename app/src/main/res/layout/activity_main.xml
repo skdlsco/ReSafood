@@ -13,14 +13,16 @@
 
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="?android:attr/actionBarSize"/>
+                android:layout_height="?android:attr/actionBarSize" />
 
             <android.support.design.widget.TabLayout
-                android:id="@+id/marinTabLayout"
+                android:id="@+id/mainTabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="?android:attr/actionBarSize"
-                android:paddingLeft="70dp" />
+                android:paddingLeft="70dp"
+                app:tabMode="scrollable"/>
         </android.support.design.widget.AppBarLayout>
+
         <android.support.v4.view.ViewPager
             android:id="@+id/main_viewpager"
             android:layout_width="match_parent"
