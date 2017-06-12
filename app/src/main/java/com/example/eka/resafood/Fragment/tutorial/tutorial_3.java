@@ -1,4 +1,4 @@
-package com.example.eka.resafood.Fragment;
+package com.example.eka.resafood.Fragment.tutorial;
 
 
 import android.os.Bundle;
@@ -12,8 +12,8 @@ import com.example.eka.resafood.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class tutorial_1 extends Fragment {
-    public tutorial_1() {
+public class tutorial_3 extends Fragment {
+    public tutorial_3() {
     }
 
 
@@ -21,7 +21,7 @@ public class tutorial_1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tutorial_1, container, false);
+        return inflater.inflate(R.layout.fragment_tutorial_3, container, false);
     }
 
 }

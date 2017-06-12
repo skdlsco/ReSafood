@@ -1,4 +1,4 @@
-package com.example.eka.resafood.Fragment;
+package com.example.eka.resafood.Fragment.tutorial;
 
 
 import android.os.Bundle;

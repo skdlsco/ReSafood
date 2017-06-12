@@ -2,36 +2,38 @@ package com.example.eka.resafood.Activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
+import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.eka.resafood.R;
-import com.example.eka.resafood.databinding.ActivityTermsBinding;
 
-public class TermsActivity extends AppCompatActivity {
+public class FirstScreenActivity extends AppCompatActivity {
+    private Button start,login;
     private Context context = this;
-    ActivityTermsBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_terms);
+        setContentView(R.layout.activity_first_screen);
 
-        binding.termsAgree.setOnClickListener(new View.OnClickListener() {
+        start = (Button) findViewById(R.id.first_screen_startbtn);
+        login = (Button) findViewById(R.id.first_screen_loginbtn);
+
+        login.setPaintFlags(login.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG |Paint.FAKE_BOLD_TEXT_FLAG);
+
+        start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context,RegisterActivity.class);
+                Intent intent = new Intent(context,TermsActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
-        binding.termsCancel.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
             }
         });
     }
